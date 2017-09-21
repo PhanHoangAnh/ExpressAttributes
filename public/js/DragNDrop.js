@@ -121,10 +121,8 @@ function createSingleControlGroup(template) {
     container_div.querySelector('[data-controltype="label"]').innerHTML = template["label"];
     var input_cover = container_div.querySelector('[component-role = "inpuCover"]');
     var input = document.createElement("input");
-    input.classList.add("col-md-12");
-    input.classList.add("col-lg-12");
-    input.classList.add("form-control");
-
+    input.classList.add("col-md-12","col-lg-12","form-control");
+    
     switch (template["Input Type"]) {
         case ("text"):
             input.type = "text";
@@ -159,9 +157,7 @@ function createSingleControlGroup(template) {
             break;
         case ("select"):
             input = document.createElement("select");
-            input.classList.add("col-md-12");
-            input.classList.add("col-lg-12");
-            input.classList.add("form-control");
+            input.classList.add("col-md-12","col-lg-12","form-control");
             if (template["fields"]["options"]) {
                 for (item in template["fields"]["options"]) {
                     var option = document.createElement("option");
@@ -291,9 +287,7 @@ function createSingleControlGroup(template) {
             // https://rawgit.com/PhanHoangAnh/CreateDynamicAttributeSets/master/materials/sample.jpg
             input.setAttribute("src", "https://rawgit.com/PhanHoangAnh/CreateDynamicAttributeSets/master/materials/sample.jpg");
             input.style.height = "auto";
-            input.classList.add("col-md-12");
-            input.classList.add("col-lg-12");
-            input.classList.add("form-control");
+            input.classList.add("col-md-12","col-lg-12","form-control");
             input_cover.insertBefore(input, container_div.querySelector('[data-controltype="describe"]'));
             container_div.setAttribute("data-controlType", "image");
             break;

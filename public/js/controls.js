@@ -1,4 +1,4 @@
-var controlsdata = [{
+var g_controlDatas = [{
         "container": "standardElement",
         "label": "Text Input",
         "Input Type": "text",
